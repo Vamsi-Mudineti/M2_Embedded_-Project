@@ -3,9 +3,7 @@ PROJ_NAME = transmitter
 BUILD_DIR = Build
 
 # All Source code files
-SRC = main.c
-src/receiver.c
-
+SRC = main.c src/receiver.c
 # All header file paths
 INC = -I inc
 
