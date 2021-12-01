@@ -9,14 +9,14 @@
 
     • Explore the communication between multiple microcontrollers.
     • Use Visual Studio Code.
-    • Using Proteus as a simulator for such a communication.
-    • Use the Arduino Serial Plotter.
+    • Using SIMULIDE,Proteus as a simulator for such a communication.
+    • Use the Serial communication.
 
 ## 3.	Requirements
 
 - Components Required
 - Hardware: ATMEGA8 (2 pieces), power supply (5v), AVR-ISP PROGRAMMER, 100uF capacitor (connected across power supply), 1KΩ resistor (two pieces), LED , Button.
-- Let us understand the serial communication in AVR microcontrollers. Here ATMEGA sends data to the other ATMEGA in serial. It has other mode of communication but for easy communication we are choosing RS232. The RS232 pin of first ATMEGA8 is connected to RXD pin of second ATMEGA8.
+- Let us understand the serial communication in AVR microcontrollers. Here ATMEGA sends data to the other ATMEGA in serial. It has other mode of communication but for easy communication we are choosing RS232. The TXD pin of first ATMEGA328 is connected to RXD pin of second ATMEGA328 and RXD pin of first ATMEGA328 (master) is connected to TXD of second ATMEGA328(slave) of RXD.  
 
 ![image](https://user-images.githubusercontent.com/94225184/144241120-0b9c442f-328e-4a43-8b93-0d1c1bcf3db1.png)
 
@@ -28,7 +28,7 @@ The data communication established is programmed to have:
 - No parity check bit
 - Baud rate of 2400 BPS(Bits Per Second)
 - Asynchronous communication (No clock share between two ATMEGA8)
-- So we have two set registers for two ATMEGA8 differently, where one acts as TRANSMITTER and other acts as RECEIVER.
+- So we have two set registers for two ATMEGA328 differently, where one acts as TRANSMITTER and other acts as RECEIVER.
 
 ![image](https://user-images.githubusercontent.com/94225184/144240979-2592b0f2-eb1e-4a66-8e82-c5477fe26c03.png)
 
